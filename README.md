@@ -34,3 +34,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Add New FONT
+Check google font website https://fonts.google.com/ and select the font you want to use
+
+Step by Step Guideline:
+- Open layout.js file inside src folder and import the from `next/font/google`. Please note:  Use an underscore (_) for font names with multiple words. E.g. Roboto Mono should be imported as Roboto_Mono.
+- The import statement will be like `import {Roboto} from "next/font/google";`, where `Roboto` is a font name.
+- Then define the variable with proper options. As example:
+  ```bash
+  const robotoSans = Roboto({
+  variable: "--font-roboto",
+  weight: ['200', '300', '400', '500', '600', '700'], //font weight
+  subsets: ["latin"],
+  })```;
+- Then inject the variable inside the body tag of html. As example:
+  ```bash
+  <body className={`${robotoSans.variable} antialiased`}>
+    {children}
+  </body>
+  ```
+  This makes fonts available globally via CSS variables.
+- Now open `globals.css` file and you can use the variable inside the css directly
