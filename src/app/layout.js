@@ -1,4 +1,4 @@
-import {Oswald, Roboto, Playwrite_AU_SA} from "next/font/google";
+import {Oswald, Roboto, Playwrite_AU_SA, Lexend} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
@@ -15,6 +15,12 @@ const robotoSans = Roboto({
     subsets: ["latin"],
 });
 
+const lexendSans = Lexend({
+    variable: "--font-lexend",
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+    subsets: ["latin"],
+});
+
 const playwriteSans = Playwrite_AU_SA({
     variable: "--font-playwrite",
     weight: ['100', '200', '300', '400'],
@@ -25,7 +31,7 @@ export const metadata = {
     title: "bengUSA.pro",
     description: "A portfolio website for featuring company named bengUSA.pro",
     icons: {
-        icon: '/images/bengusa.png'
+        icon: '/images/svg/bengusaicon.svg'
     }
 };
 
@@ -33,7 +39,7 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body
-            className={`${oswaldSans.variable} ${robotoSans.variable} ${playwriteSans.variable} antialiased`}
+            className={`${oswaldSans.variable} ${robotoSans.variable} ${playwriteSans.variable} ${lexendSans.variable} antialiased`}
         >
         <Navbar/>
         <main>{children}</main>
