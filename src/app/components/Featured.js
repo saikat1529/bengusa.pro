@@ -1,0 +1,87 @@
+
+  'use client';
+import { useState } from 'react';
+import Image from 'next/image';
+import Modal from './Modal'
+
+const filters = ['Featured', 'B2B', 'B2C', 'Ecommerce'];
+
+
+const examples = [
+  { title: 'RE/MAX', img: '/public/examples/1.PNG', category: 'B2C' },
+  { title: 'Northwestern University', img: '/public/examples/2.PNG', category: 'Featured' },
+  { title: 'B&O', img: '/public/examples/4.PNG', category: 'B2C' },
+  { title: 'Rollink', img: '/public/examples/5.PNG', category: 'B2B' },
+  { title: 'Paul Stuart', img: '/public/examples/11', category: 'B2C' },
+  { title: 'EZ Express', img: '/public/examples/12.PNG', category: 'B2B' },
+  { title: 'Ventura Foods', img: '/public/examples/13.PNG', category: 'B2B' },
+  { title: 'Pum Energy', img: '/public/examples/14.PNG', category: 'Ecommerce' },
+  { title: 'Pua Energy', img: '/public/examples/21.PNG', category: 'Ecommerce' },
+  { title: 'Pma Energy', img: '/public/examples/22.PNG', category: 'Ecommerce' },
+  { title: 'uma Energy', img: '/public/examples/23.PNG', category: 'Ecommerce' },
+  { title: 'Pa Energy', img: '/public/examples/23.PNG', category: 'B2C' },
+  { title: 'Energy', img: '/public/examples/24.PNG', category: 'Featured' },
+  { title: 'umanergy', img: '/public/examples/22.PNG', category: 'Featured' },
+  { title: 'Pa Energy', img: '/public/examples/21.PNG', category: 'Featured' },
+];
+
+export default function Featured() {
+  const [active, setActive] = useState('Featured');
+  const filteredExamples = examples.filter((item) => item.category === active);
+
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  return (
+    <main className="bg-gradient-to-r from-slate-900 to-slate-900 text-white p-4 md:p-10 ">
+      {/* Filter Menu */}
+      <div className="flex justify-center gap-6 mb-10">
+        {filters.map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setActive(filter)}
+            className={`uppercase px-4 py-2 border-b-2 ${
+              active === filter ? 'border-white font-bold' : 'border-transparent'
+            } hover:border-white transition duration-200`}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+
+      {/* Grid Display */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        {filteredExamples.map((item, index) => (
+          <div
+            key={index}
+            className="bg-gradient-to-r from-blue-950 to-slate-800 p-4 rounded-xl relative group overflow-hidden"
+          >
+            <Image
+              src={item.img}  
+              alt={item.title} 
+              width={100}
+              height={100}
+            //   className="transition-transform duration-300 group-hover:scale-105"
+            />
+            <h3 className="absolute bottom-4 left-4 font-bold text-lg">{item.title}</h3>
+          </div>
+        ))}
+      </div>
+
+      {/* Load More */}
+      <div className="flex justify-center mt-12">
+        <button
+        onClick={() => setModalOpen(true)}
+        type='button'
+        className="cursor-pointer text-white text-sm uppercase tracking-wide hover:underline">
+          Load More Examples ↓
+        </button>
+         <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+        <h2 className="text-xl font-semibold mb-4 text-center">This Section is not complete yet</h2>
+        <p className='text-2xl text-center text-bold'>Stay connected with us to get the best service.</p>
+        </Modal>
+               
+      </div>
+    </main>
+  );
+}
+

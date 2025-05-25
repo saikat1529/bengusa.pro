@@ -1,64 +1,84 @@
 'use client';
 import Image from 'next/image';
+import ClientLogos from "./components/ClientLogos";
+import Featured from './components/Featured';
+import { useState } from "react";
+import Modal from "./components/Modal"
+
+// import Check from './components/Check';
 
 export default function Home() {
+   const [isModalOpen, setModalOpen] = useState(false);
+
   return (
-    <>
-      <div className='bg-gradient-to-r from-slate-900   to-purple-600  h-150 '>
-        <p className='pt-20 ml-15 lg:pt-8 lg:ml-40 lg:mt-10 text-white text-xl font-bold '>
+  <>
+<div className="bg-[url('/')] bg-cover bg-center">
+      <div className='bg-gradient-to-r from-purple-900 to-slate-900 lg:h-160 h-150 '>
+        <p className='pt-40 ml-15 lg:pt-20 lg:ml-100 lg:mt-15 lg:text-3xl text-white text-lg font-medium '>
           Premium Web Design Agency
         </p>
-        <p className='pt-5 ml-15 lg:ml-40 lg:mt-4 text-white lg:text-7xl text-5xl font-bold'>
-          WE GROW BRANDS <br /> ONLINE
+        <p className='pt-5 ml-15 lg:ml-100 text-white lg:text-8xl text-4xl font-bold gap-3'>
+          WE GROW <br /> BRANDS  ONLINE
         </p>
-        <p className='ml-15 mb-10 pt-4 lg:pt-5 lg:ml-40  text-white text-xl  font-bold '>
+        <p className='ml-15 mb-10 pt-4 lg:pt-5 lg:ml-100  text-white text-lg  font-medium '>
           Custom Websites, Brading & Digital Marketing{' '}
         </p>
         <button
+         onClick={() => setModalOpen(true)}
           type='button'
-          className='ml-20 text-2xl lg:mt-6 lg:ml-40 lg:text-4xl text-white font-semibold hover:text-black py-2 px-3 border-3 font-sans border-white-500 rounded-2xl hover:bg-white'
+          className='cursor-pointer ml-15 lg:ml-100 text-3xl text-black bg-white hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-sm lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
         >
           Explore All Services
         </button>
+
+         <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+          
+        <h2 className="text-xl font-bold mb-4 text-blue-600 dark:text-sky-400">This Section is not complete yet</h2>
+        <p className='text-blue-600 dark:text-sky-400'>Stay connected with us to get the best service</p>
+        </Modal>
         <div className='mt-10 flex flex-grid'>
-          <div className='ml-8 lg:pt-8 lg:ml-40 lg:mt-8 text-white lg:text-3xl'>
+          <div className='ml-15 lg:ml-100 text-white lg:text-xl'>
             5 star design review <br />
             🎇 | ⭐⭐⭐⭐⭐
           </div>
-          <p className='ml-5 lg:pt-8 lg:ml-40 lg:mt-8 text-white lg:text-3xl'>
+          <p className='ml-4 lg:ml-15 text-white lg:text-xl'>
             Best Digital Agency of 2024 <br />
             Forbes
           </p>
         </div>
+        <br/>
       </div>
+</div>
 
-      <div className='lg:pt-8 bg-radial from-blue-900 to-slate-500 text-white lg:h-190 h-275'>
-        <p className='ml-5 text-2xl text-center lg:ml-40 lg:mt-8 lg:text-5xl'>
+<ClientLogos />
+      <div className='lg:pt-15 pt-20 bg-gradient-to-r from-slate-900 to-slate-900 text-white lg:h-220 h-375'>
+        
+        <p className='ml-8 lg:ml-80 lg:mt-8 lg:text-5xl text-4xl font-bold text-center sm:text-left'>
           {' '}
-          Creative Web Agency delivering <br /> Custom Solutions
+          Creative Web Agency <br /> delivering  Custom Solutions
         </p>
-        <p className='pt-8 ml-5 lg:ml-40 lg:mt-8 text-2xl '>
+        <p className='pt-8 ml-8 lg:ml-80 lg:mt-8 text-xl font-medium'>
           {' '}
-          ✔Custom Web Design Solutions{' '}
+          ✔ Custom Web Design Solutions{' '}
           <span className='text-blue-300'>
             {' '}
             To <br /> Drive Conversions{' '}
           </span>{' '}
         </p>
-        <p className='ml-5 lg:ml-40 lg:mt-8 mt-5 text-2xl'>
+        <p className='ml-8 lg:ml-80 lg:mt-8 mt-5 text-xl font-medium'>
           {' '}
-          ✔Effective Marketing Campaigns{' '}
+          ✔ Effective Marketing Campaigns{' '}
           <span className='text-blue-300'>
             {' '}
             To <br /> Generate Growth{' '}
           </span>{' '}
         </p>
-        <p className=' ml-5 lg:ml-40 mt-5 text-2xl'>
+        <p className=' ml-8 lg:ml-80 mt-5 text-xl font-medium'>
           {' '}
-          ✔Tailored Branding Strategies{' '}
-          <span className='text-blue-300'> To Drive Engagement </span>{' '}
+          ✔ Tailored Branding Strategies{' '}
+          <span className='text-blue-300'> <br/> To Drive Engagement </span>{' '}
         </p>
-        <p className=' ml-8 lg:ml-40 mt-5 lg:text-2xl mt-5 text-md'>
+        <p className=' ml-8 lg:ml-80 lg:text-2xl mt-5 text-lg'>
           Digital Silk is a web design company & digital marketing agency
           focused on <br /> growing brands online. We create effective brand
           strategies, custom web design, development, <br /> and digital
@@ -70,22 +90,34 @@ export default function Home() {
           optimal results.
         </p>
 
-        <p className='ml-18 lg:ml-60 mt-8 text-2xl bg-purple-500 border-top-left-5 rounded-l-lg'>
-          See Our Work In action <br />1 minute
+        <div  className='ml-10 lg:ml-80 mt-8 text-2xl lg:bg-gradient-to-r from-purple-600 to-slate-900 border-top-left-5'> 
+         <p>
+    <video width="320" height="240" controls preload="none">
+      <source src="/public/vid1.mp4" type="video/mp4" />
+      {/* <track
+        src="/public/vid1.mp4"
+        // kind="subtitles"
+        // srcLang="en"
+        // label="English"
+      /> */}
+      {/* <p > See Our Work In action <br />1 minute </p> */}
+    </video>  
         </p>
+        </div>
+
         <Image
-          className='mt-10 ml-10 lg:ml-220 rounded-2xl lg:absolute lg:top-220 lg:right-30 '
+          className='mt-10 ml-4 lg:ml-175 rounded-2xl lg:absolute lg:top-220 lg:right-70 '
           src='/images/dummy2.jpg'
           alt='Picture of the author'
-          width={300}
-          height={200}
+          width={350}
+          height={300}
         />
       </div>
 
-      <div className='bg-gradient-to-b from-blue-800 via-violet-900 to-slate-800 lg:h-150 text-white text-center'>
-        <h1 className='pt-8 text-2xl'> Our Work</h1>
-        <h1 className='pt-5 text-4xl lg:pt-5 lg:text-5xl '>
-          Featured Website <br /> Design Projects
+      <div className='bg-gradient-to-r from-blue-950 to-slate-800 lg:h-70 text-white text-center'>
+        <h1 className='pt-8 text-2xl'> OUR WORK</h1>
+        <h1 className='pt-2 text-4xl lg:pt-5 lg:text-5xl '>
+          Featured Website <span className=''> Design Projects </span>
         </h1>
         <p className='pt-5 lg:pt-5 text-2xl'>
           {' '}
@@ -93,15 +125,16 @@ export default function Home() {
           optimized for traffic, engagement and conversion.
         </p>
       </div>
+       <Featured />
 
-      <div className='lg:pt-8 bg-gradient-to-r  from-blue-800 via-violet-900 to-slate-800 text-white lg:h-190 h-200 text-center'>
-        <h5 className='pt-8 text-2xl'> Clients Across Industries </h5>
+      <div className='lg:pt-8 bg-gradient-to-r from-slate-900 to-slate-900 text-white lg:h-190 h-165 text-center'>
+        <h5 className='pt-8 text-2xl text-cyan-600'> Clients Across Industries </h5>
         <h1 className='pt-8 text-5xl'>Full-Service Web Design Agency</h1>
         <p className='pt-8 text-2xl'>From startups to Fortune 500 companies,</p>
         <h3 className='pt-3 text-3xl'>
           we create custom solutions that grow brands online
         </h3>
-        <div className='mx-auto mt-30 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5'>
+        {/* <div className='mx-auto mt-30 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-20 lg:max-w-none lg:grid-cols-5'>
           <Image
             className='col-span-2 max-h-12 w-full object-contain lg:col-span-1'
             src='https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg'
@@ -137,18 +170,24 @@ export default function Home() {
             width='158'
             height='65'
           />
-        </div>
-
+        </div> */}
+<ClientLogos />
+<ClientLogos />
         <button
+         onClick={() => setModalOpen(true)}
           type='button'
-          className='mt-6 lg:mt-20 lg:ml-25 lg:text-4xl text-white font-semibold hover:text-black py-2 px-3 border-3 font-sans border-white-500 rounded-2xl hover:bg-white'
+          className='cursor-pointer mt-6 lg:mt-20 lg:ml-25 lg:text-4xl text-white bg-gradient-to-r from-slate-600 via-slate-600 to-slate-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 '
         >
           Explore All Services
         </button>
+         <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+        <h2 className="text-xl font-bold mb-4">This Section is not complete yet</h2>
+        <p>Stay connected with us to get the best service</p>
+      </Modal>
       </div>
 
-      <div className='h-600  lg:h-550 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white  '>
-        <div className='ml-10 w-70 lg:w-100 bg-blue-950  lg:mt-12 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700'>
+      <div className='h-600 pt-5 lg:h-550 bg-gradient-to-r from-blue-950 to-slate-800 text-white  '>
+        <div className='ml-10 w-70 lg:w-100 bg-blue-950  lg:mt-8 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:white-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -173,7 +212,7 @@ export default function Home() {
           </p>
         </div>
  <br/>
-        <div className=' ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-95 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700'>
+        <div className=' ml-10 w-70 lg:w-100 lg:mt-90 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -199,7 +238,7 @@ export default function Home() {
 
         <br/>
 
-        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-180 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700'>
+        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-175 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -222,8 +261,8 @@ export default function Home() {
             website is both aesthetically pleasing and highly functional.
           </p>
         </div>
- <br/>
-        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-260 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700'>
+     <br/>
+        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-260 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -247,7 +286,7 @@ export default function Home() {
           </p>
         </div>
          <br/>
-        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-340 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700'>
+        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-335 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -272,7 +311,7 @@ export default function Home() {
           </p>
         </div>
    <br/>
-        <div className='ml-10 w-70 lg:w-100 lg:pt-8 bg-blue-950 lg:mt-420 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700'>
+        <div className='ml-10 w-70 lg:w-100 lg:pt-8 bg-blue-950 lg:mt-425 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -296,11 +335,12 @@ export default function Home() {
           </p>
         </div>
 
-        <div>
-          <p className='ml-15 pt-10 lg:pt-150 lg:ml-30 text-3xl text-purple-500'>
+        <div >
+          <div className= "Fixed">
+          <p className='ml-15 pt-10 lg:pt-6 lg:ml-30 text-3xl text-cyan-600'>
             WHY DIGITAL SILK?
           </p>
-          <h1 className='ml-15 lg:pt-3 lg:ml-30  text-4xl lg:text-6xl'>
+          <h1 className=' font-bold mb-6 ml-15 lg:pt-3 lg:ml-30  text-4xl lg:text-6xl'>
             Discover Our <br />
             Expertise as a Web <br />
             Design Company
@@ -319,8 +359,10 @@ export default function Home() {
             width={250}
             height={150}
           />
+          </div>
+
         </div>
-      </div>
+        </div>
 
       <div className=" bg-[url('../../public/images/dummy3.jpg')] bg-cover bg-center w-full lg:h-210 lg:h-185 ">
         <p className='text-center text-2xl pt-8 lg:absolute lg:right-0 lg:mr-30 lg:text-4xl text-white lg:pt-25'>
@@ -341,16 +383,21 @@ export default function Home() {
           <p className='text-center text-7xl pt-5 lg:text-9xl text-blue-400 lg:absolute lg:right-0 lg:mr-180 lg:pt-85'>
             40k
           </p>
-          <p className=' text-center text-2xl pt-2 text-white lg:absolute lg:right-0 lg:mr-180 lg:pt-120 text-xl'>
+          <p className=' text-center text-2xl pt-2 text-white lg:absolute lg:right-0 lg:mr-180 lg:pt-120'>
             Active members <br /> inside the program
           </p>
         </div>
         <button
           type='button'
-          className='ml-10 text-3xl lg:ml-220 lg:absolute lg:mt-150 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
+           onClick={() => setModalOpen(true)}
+          className='cursor-pointer ml-10 text-3xl lg:ml-250 lg:absolute lg:mt-150 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
         >
           READ HP CASE STUDY ▶
         </button>
+          <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+        <h2 className="text-xl font-bold mb-4">This Section is not complete yet</h2>
+        <p>Stay connected with us to get the best service</p>
+      </Modal>
 
         <div>
           <p className='text-center text-7xl pt-5 lg:text-9xl text-blue-400 lg:absolute lg:right-0 lg:mr-75 lg:pt-85'>
@@ -362,10 +409,15 @@ export default function Home() {
         </div>
         <button
           type='button'
-          className='ml-10 text-3xl lg:ml-120 lg:absolute lg:mt-150 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
+           onClick={() => setModalOpen(true)}
+          className='cursor-pointer ml-10 text-3xl lg:ml-150 lg:absolute lg:mt-150 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
         >
           READ HP CASE STUDY ▶
         </button>
+         <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+        <h2 className="text-xl font-bold mb-4">This Section is not complete yet</h2>
+        <p>Stay connected with us to get the best service</p>
+      </Modal>
 
         <div className='bg-cover bg-center relative text-white h-full w-72'>
           <div className='ml-20 h-full w-full px-6 py-10 space-y-10'>
@@ -472,49 +524,56 @@ export default function Home() {
         <br/>
         <button
           type='button'
-          className='ml-30 lg:ml-130 lg:text-4xl text-white font-bold hover:text-cyan-300 py-2 px-4 border border-white-500 rounded-2xl'
+           onClick={() => setModalOpen(true)}
+          className='cursor-pointer ml-30 lg:ml-130 lg:text-4xl text-white font-bold hover:text-cyan-600 py-2 px-4 border border-white-500 rounded-2xl'
         >
           CALCULATE YOUR WEBSITE
         </button>
-        <div className='ml-5 mt-10 text-white lg:ml-15 rounded-xl'>
-          <div className=' flex'>
+        <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+        <h2 className="text-xl font-bold mb-4">This Section is not complete yet</h2>
+        <p>Stay connected with us to get the best service</p>
+      </Modal>
+        <div className='ml-5 mt-16 text-white lg:ml-15 rounded-xl'>
+          <div className=' flex gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-20 lg:max-w-none lg:grid-cols-4'>
             <p className='text-white text-sm lg:text-xl '>
-              <span className='text-md lg:text-2xl text-blue-400'>
-                Your choice of <br /> platform <br />{' '}
+              <span className='text-md lg:text-2xl text-blue-400 lg:text-center '>
+                Your choice of platform {' '} <br/> 
               </span>
-              also plays a role in the cost. <br />
+              also plays a role in the cost. 
               Templated solutions are more
-              <br /> affordable while developing a <br /> fully custom site will
-              increase the <br /> project’s total expense.
+               affordable while developing a  fully custom site will
+              increase the  project’s total expense.
             </p>
 
             <p className='text-white text-sm lg:text-xl  lg:ml-40'>
               <span className='text-md lg:text-2xl text-blue-400'>
-                Custom graphic <br /> elements <br />{' '}
+                Your choice of platform {' '} <br/> 
+                Custom graphic  elements {' '} 
               </span>
-              are essential for enhancing your <br />
+              are essential for enhancing your 
               web presence. However, the more
-              <br /> complex the design requirements,
-              <br /> fully custom site will increase the <br />
+               complex the design requirements,
+               fully custom site will increase the 
               the higher the overall cost.
             </p>
             <p className='text-white text-sm lg:text-xl  lg:ml-40'>
               <span className='text-md lg:text-2xl text-blue-400'>
-                After launching <br />
-                your new website <br />{' '}
+                After launching 
+                Your choice of platform {' '} 
+                your new website {' '} <br/>
               </span>
               to outperform competitors in
-              <br /> affordable while developing a <br /> search engine rankings
-              and <br /> secure top positions in your <br /> industry.
+               affordable while developing a  search engine rankings
+              and  secure top positions in your  industry.
             </p>
             <p className='text-white text-sm lg:text-xl lg:ml-40'>
               <span className='text-md lg:text-2xl text-blue-400'>
-                Your choice of <br /> platform <br />{' '}
+                Your choice of  platform {' '}
               </span>
-              also plays a role in the cost. <br />
+              also plays a role in the cost. 
               Templated solutions are more
-              <br /> affordable while developing a <br /> fully custom site will
-              increase the <br /> project’s total expense.
+               affordable while developing a  fully custom site will
+              increase the  project’s total expense.
             </p>
             <p className=''>
               <span className=''></span>
@@ -1103,10 +1162,15 @@ export default function Home() {
             <textarea placeholder="Your Message*" rows={4} className="w-full px-4 py-3 bg-transparent border-b border-gray-500 focus:outline-none resize-none" />
             <button
               type="submit"
+              onClick={() => setModalOpen(true)}
               className="ml-30 mt-4 bg-gradient-to-r from-purple-500 to-blue-500 px-6 py-2 rounded text-white hover:opacity-90 transition"
             >
               SUBMIT →
             </button>
+            <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+        <h2 className="text-xl font-bold mb-4">This Section is not complete yet</h2>
+        <p>Stay connected with us to get the best service</p>
+      </Modal>
           </form>
         </div>
       </div>
