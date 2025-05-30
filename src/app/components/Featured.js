@@ -8,21 +8,21 @@ const filters = ['Featured', 'B2B', 'B2C', 'Ecommerce'];
 
 
 const examples = [
-  { title: 'RE/MAX', img: '/public/examples/1.PNG', category: 'B2C' },
-  { title: 'Northwestern University', img: '/public/examples/2.PNG', category: 'Featured' },
-  { title: 'B&O', img: '/public/examples/4.PNG', category: 'B2C' },
-  { title: 'Rollink', img: '/public/examples/5.PNG', category: 'B2B' },
-  { title: 'Paul Stuart', img: '/public/examples/11', category: 'B2C' },
-  { title: 'EZ Express', img: '/public/examples/12.PNG', category: 'B2B' },
-  { title: 'Ventura Foods', img: '/public/examples/13.PNG', category: 'B2B' },
-  { title: 'Pum Energy', img: '/public/examples/14.PNG', category: 'Ecommerce' },
-  { title: 'Pua Energy', img: '/public/examples/21.PNG', category: 'Ecommerce' },
-  { title: 'Pma Energy', img: '/public/examples/22.PNG', category: 'Ecommerce' },
-  { title: 'uma Energy', img: '/public/examples/23.PNG', category: 'Ecommerce' },
-  { title: 'Pa Energy', img: '/public/examples/23.PNG', category: 'B2C' },
-  { title: 'Energy', img: '/public/examples/24.PNG', category: 'Featured' },
-  { title: 'umanergy', img: '/public/examples/22.PNG', category: 'Featured' },
-  { title: 'Pa Energy', img: '/public/examples/21.PNG', category: 'Featured' },
+  { title: 'REMAX', img: '/examples/1.PNG', category: 'B2C' },
+  { title: 'Northwestern University', img: '/examples/2.PNG', category: 'Featured' },
+  { title: 'B&O', img: '/examples/4.PNG', category: 'B2C' },
+  { title: 'Rollink', img: '/examples/5.PNG', category: 'B2B' },
+  { title: 'Paul Stuart', img: '/examples/11.PNG', category: 'B2C' },
+  { title: 'EZ Express', img: '/examples/12.PNG', category: 'B2B' },
+  { title: 'Ventura Foods', img: '/examples/13.PNG', category: 'B2B' },
+  { title: 'Pum Energy', img: '/examples/14.PNG', category: 'Ecommerce' },
+  { title: 'Pua Energy', img: '/examples/21.PNG', category: 'Ecommerce' },
+  { title: 'Pma Energy', img: '/examples/22.PNG', category: 'Ecommerce' },
+  { title: 'uma Energy', img: '/examples/23.PNG', category: 'Ecommerce' },
+  { title: 'Pa Energy', img: '/examples/23.PNG', category: 'B2C' },
+  { title: 'Energy', img: '/examples/24.PNG', category: 'Featured' },
+  { title: 'umanergy', img: '/examples/22.PNG', category: 'Featured' },
+  { title: 'Pa Energy', img: '/examples/21.PNG', category: 'Featured' },
 ];
 
 export default function Featured() {
@@ -49,7 +49,7 @@ export default function Featured() {
       </div>
 
       {/* Grid Display */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1  gap-8 items-center gap-x-10 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-50 lg:max-w-none lg:grid-cols-2">
         {filteredExamples.map((item, index) => (
           <div
             key={index}
@@ -58,11 +58,11 @@ export default function Featured() {
             <Image
               src={item.img}  
               alt={item.title} 
-              width={100}
-              height={100}
-            //   className="transition-transform duration-300 group-hover:scale-105"
+              width={800}
+              height={600}
+              className="transition-transform duration-300 group-hover:scale-150"
             />
-            <h3 className="absolute bottom-4 left-4 font-bold text-lg">{item.title}</h3>
+            <h3 className="absolute bottom-4 left-4 font-bold text-lg ">{item.title}</h3>
           </div>
         ))}
       </div>

@@ -91,18 +91,18 @@ export default function Home() {
         </p>
 
         <div  className='ml-10 lg:ml-80 mt-8 text-2xl lg:bg-gradient-to-r from-purple-600 to-slate-900 border-top-left-5'> 
-         <p>
+         <div className="flex rounded-lg">
     <video width="320" height="240" controls preload="none">
-      <source src="/public/vid1.mp4" type="video/mp4" />
-      {/* <track
+      <source src="/vid1.mp4" type="video/mp4" />
+      <track
         src="/public/vid1.mp4"
-        // kind="subtitles"
-        // srcLang="en"
-        // label="English"
-      /> */}
-      {/* <p > See Our Work In action <br />1 minute </p> */}
+        kind="subtitles"
+        srcLang="en"
+        label="English"
+      />
+      <p > See Our Work In action <br />1 minute </p>
     </video>  
-        </p>
+      </div>
         </div>
 
         <Image
@@ -185,9 +185,8 @@ export default function Home() {
         <p>Stay connected with us to get the best service</p>
       </Modal>
       </div>
-
-      <div className='h-600 pt-5 lg:h-550 bg-gradient-to-r from-blue-950 to-slate-800 text-white  '>
-        <div className='ml-10 w-70 lg:w-100 bg-blue-950  lg:mt-8 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:white-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
+      <div className='h-755 pt-5 lg:h-610 bg-gradient-to-r from-blue-950 to-slate-800 text-white '>
+        <div className='scroll-auto ml-10 w-70 lg:w-100 bg-blue-950  lg:mt-8 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:white-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-120'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -212,7 +211,7 @@ export default function Home() {
           </p>
         </div>
  <br/>
-        <div className=' ml-10 w-70 lg:w-100 lg:mt-90 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
+        <div className=' ml-10 w-70 lg:w-100 lg:mt-105 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -238,7 +237,7 @@ export default function Home() {
 
         <br/>
 
-        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-175 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
+        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-200 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -262,7 +261,7 @@ export default function Home() {
           </p>
         </div>
      <br/>
-        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-260 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
+        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-290 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -286,7 +285,7 @@ export default function Home() {
           </p>
         </div>
          <br/>
-        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-335 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
+        <div className='ml-10 w-70 lg:w-100 bg-blue-950 lg:mt-380 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -311,7 +310,7 @@ export default function Home() {
           </p>
         </div>
    <br/>
-        <div className='ml-10 w-70 lg:w-100 lg:pt-8 bg-blue-950 lg:mt-425 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
+        <div className='ml-10 w-70 lg:w-100 lg:pt-8 bg-blue-950 lg:mt-475 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-130'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -336,7 +335,7 @@ export default function Home() {
         </div>
 
         <div >
-          <div className= "Fixed">
+          <div className= "">
           <p className='ml-15 pt-10 lg:pt-6 lg:ml-30 text-3xl text-cyan-600'>
             WHY DIGITAL SILK?
           </p>
@@ -353,11 +352,11 @@ export default function Home() {
             reach, drive traffic and encourage engagement.
           </p>
           <Image
-            className='ml-15 lg:ml-40 mt-8 rounded-xl'
+            className='ml-15 lg:ml-40 mt-8 rounded-xl '
             src='/images/dummy2.jpg'
             alt='Picture of the author'
-            width={250}
-            height={150}
+            width={300}
+            height={200}
           />
           </div>
 
@@ -390,7 +389,7 @@ export default function Home() {
         <button
           type='button'
            onClick={() => setModalOpen(true)}
-          className='cursor-pointer ml-10 text-3xl lg:ml-250 lg:absolute lg:mt-150 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
+          className='cursor-pointer ml-18 text-xl lg:ml-250 lg:absolute lg:mt-150 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
         >
           READ HP CASE STUDY ▶
         </button>
@@ -410,7 +409,7 @@ export default function Home() {
         <button
           type='button'
            onClick={() => setModalOpen(true)}
-          className='cursor-pointer ml-10 text-3xl lg:ml-150 lg:absolute lg:mt-150 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
+          className='cursor-pointer ml-18 text-xl lg:ml-150 lg:absolute lg:mt-150 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
         >
           READ HP CASE STUDY ▶
         </button>
@@ -525,7 +524,7 @@ export default function Home() {
         <button
           type='button'
            onClick={() => setModalOpen(true)}
-          className='cursor-pointer ml-30 lg:ml-130 lg:text-4xl text-white font-bold hover:text-cyan-600 py-2 px-4 border border-white-500 rounded-2xl'
+          className='cursor-pointer ml-30 lg:ml-160 lg:text-4xl text-white font-bold hover:text-cyan-600 py-2 px-4 border border-white-500 rounded-2xl'
         >
           CALCULATE YOUR WEBSITE
         </button>

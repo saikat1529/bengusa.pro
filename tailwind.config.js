@@ -1,11 +1,11 @@
 module.exports = {
-  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {
-        fontFamily: {
-                osw: ['var(--font-oswald)', 'sans-serif'], // for titles/headings
-                rob: ['var(--font-roboto)', 'sans-serif'],     // for paragraph text
-                ply: ['var(--font-playwrite)', 'sans-serif'],     // for paragraph text
+    theme: {
+        extend: {
+            fontFamily: {
+                oswald: ['var(--font-oswald)', 'sans-serif'], // for titles/headings
+                roboto: ['var(--font-roboto)', 'sans-serif'],     // for paragraph text
+                playwrite: ['var(--font-playwrite)', 'sans-serif'],     // for paragraph text
+                lexend: ['var(--font-lexend)', 'sans-serif'],     // for paragraph text
             },
       animation: {
         "loop-scroll": "loop-scrool 50s linear infinite",
