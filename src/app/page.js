@@ -2,46 +2,51 @@
 import Image from 'next/image';
 import ClientLogos from "./components/ClientLogos";
 import Featured from './components/Featured';
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Modal from "./components/Modal"
-
+import Scroll from './components/Scroll';
+import LeftToRight from './components/LeftToRight'
 // import Check from './components/Check';
 
 export default function Home() {
    const [isModalOpen, setModalOpen] = useState(false);
 
+
   return (
   <>
-<div className="bg-[url('/')] bg-cover bg-center">
-      <div className='bg-gradient-to-r from-purple-900 to-slate-900 lg:h-160 h-150 '>
-        <p className='pt-40 ml-15 lg:pt-20 lg:ml-100 lg:mt-15 lg:text-3xl text-white text-lg font-medium '>
+
+<div className="bg-[url('/images/dummy3.jpg')] bg-cover bg-center">
+      <div className=' lg:h-170 h-150 '>
+        <p className='pt-40 text-center lg:pt-20 lg:mt-15 lg:text-3xl text-white text-lg font-medium '>
           Premium Web Design Agency
         </p>
-        <p className='pt-5 ml-15 lg:ml-100 text-white lg:text-8xl text-4xl font-bold gap-3'>
+        <p className='pt-4 text-center text-white lg:text-7xl text-4xl font-bold gap-3'>
           WE GROW <br /> BRANDS  ONLINE
         </p>
-        <p className='ml-15 mb-10 pt-4 lg:pt-5 lg:ml-100  text-white text-lg  font-medium '>
+        <p className='pt-4 text-center  text-white text-lg font-medium '>
           Custom Websites, Brading & Digital Marketing{' '}
         </p>
+        <br/>
+        <p className='flex flex-col items-center '>
         <button
          onClick={() => setModalOpen(true)}
           type='button'
-          className='cursor-pointer ml-15 lg:ml-100 text-3xl text-black bg-white hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-sm lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
+          className='cursor-pointer text-xl text-black bg-white hover:bg-blue-400 font-bold py-2 px-4 mt-3 rounded '
         >
           Explore All Services
         </button>
-
+</p>
          <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
           
         <h2 className="text-xl font-bold mb-4 text-blue-600 dark:text-sky-400">This Section is not complete yet</h2>
         <p className='text-blue-600 dark:text-sky-400'>Stay connected with us to get the best service</p>
         </Modal>
-        <div className='mt-10 flex flex-grid'>
-          <div className='ml-15 lg:ml-100 text-white lg:text-xl'>
+        <div className=' mt-10 flex items-center justify-center'>
+          <div className=' text-white lg:text-xl text-sm'>
             5 star design review <br />
             🎇 | ⭐⭐⭐⭐⭐
           </div>
-          <p className='ml-4 lg:ml-15 text-white lg:text-xl'>
+          <p className=' lg:ml-20 ml-5 text-white lg:text-xl text-sm'>
             Best Digital Agency of 2024 <br />
             Forbes
           </p>
@@ -51,13 +56,13 @@ export default function Home() {
 </div>
 
 <ClientLogos />
-      <div className='lg:pt-15 pt-20 bg-gradient-to-r from-slate-900 to-slate-900 text-white lg:h-220 h-375'>
+      <div className='lg:pt-15 pt-10 bg-gradient-to-r from-slate-900 to-slate-900 text-white lg:h-full h-360'>
         
-        <p className='ml-8 lg:ml-80 lg:mt-8 lg:text-5xl text-4xl font-bold text-center sm:text-left'>
+        <p className=' ml-4 lg:ml-60 lg:mt-8 lg:text-5xl text-4xl font-bold'>
           {' '}
-          Creative Web Agency <br /> delivering  Custom Solutions
+          Creative Web Agency  delivering <br /> Custom Solutions
         </p>
-        <p className='pt-8 ml-8 lg:ml-80 lg:mt-8 text-xl font-medium'>
+        <p className='pt-8 ml-4 lg:ml-60 lg:mt-8 text-xl font-medium'>
           {' '}
           ✔ Custom Web Design Solutions{' '}
           <span className='text-blue-300'>
@@ -65,7 +70,7 @@ export default function Home() {
             To <br /> Drive Conversions{' '}
           </span>{' '}
         </p>
-        <p className='ml-8 lg:ml-80 lg:mt-8 mt-5 text-xl font-medium'>
+        <p className='ml-4 lg:ml-60 lg:mt-8 mt-5 text-xl font-medium'>
           {' '}
           ✔ Effective Marketing Campaigns{' '}
           <span className='text-blue-300'>
@@ -73,25 +78,25 @@ export default function Home() {
             To <br /> Generate Growth{' '}
           </span>{' '}
         </p>
-        <p className=' ml-8 lg:ml-80 mt-5 text-xl font-medium'>
+        <p className=' ml-4 lg:ml-60 mt-5 text-xl font-medium'>
           {' '}
           ✔ Tailored Branding Strategies{' '}
           <span className='text-blue-300'> <br/> To Drive Engagement </span>{' '}
         </p>
-        <p className=' ml-8 lg:ml-80 lg:text-2xl mt-5 text-lg'>
+        <p className='lg:w-1/2 ml-4 lg:ml-60 lg:text-2xl mt-5 text-lg'>
           Digital Silk is a web design company & digital marketing agency
-          focused on <br /> growing brands online. We create effective brand
-          strategies, custom web design, development, <br /> and digital
+          focused on growing brands online. We create effective brand
+          strategies, custom web design, development, and digital
           marketing solutions to generate greater brand engagement and
           conversions.
-          <br /> We work closely with our clients to ensure each project meets
-          their brand guidelines and <br />
+          We work closely with our clients to ensure each project meets
+          their brand guidelines and
           business goals and provide technical and marketing expertise to ensure
           optimal results.
         </p>
 
-        <div  className='ml-10 lg:ml-80 mt-8 text-2xl lg:bg-gradient-to-r from-purple-600 to-slate-900 border-top-left-5'> 
-         <div className="flex rounded-lg">
+        <div  className=' lg:ml-60 mt-8 text-2xl lg:bg-gradient-to-r from-purple-600 to-slate-900 border-top-left-5'> 
+         <div className=" flex justify-center lg:justify-start items-center rounded-lg">
     <video width="320" height="240" controls preload="none">
       <source src="/vid1.mp4" type="video/mp4" />
       <track
@@ -104,14 +109,16 @@ export default function Home() {
     </video>  
       </div>
         </div>
-
+        <div className='text-center lg:text-left'>
         <Image
-          className='mt-10 ml-4 lg:ml-175 rounded-2xl lg:absolute lg:top-220 lg:right-70 '
+          className='mt-10 lg:ml-17 inline-block rounded-2xl lg:absolute lg:top-250 lg:right-30 '
           src='/images/dummy2.jpg'
           alt='Picture of the author'
           width={350}
-          height={300}
+          height={350}
         />
+        </div>
+        <br/>
       </div>
 
       <div className='bg-gradient-to-r from-blue-950 to-slate-800 lg:h-70 text-white text-center'>
@@ -124,10 +131,11 @@ export default function Home() {
           Custom B2C, B2B and eCommerce solutions <br />
           optimized for traffic, engagement and conversion.
         </p>
+        <br/>
       </div>
        <Featured />
 
-      <div className='lg:pt-8 bg-gradient-to-r from-slate-900 to-slate-900 text-white lg:h-190 h-165 text-center'>
+      <div className='lg:pt-8 bg-gradient-to-r from-slate-900 to-slate-900 text-white lg:h-190 h-190 text-center'>
         <h5 className='pt-8 text-2xl text-cyan-600'> Clients Across Industries </h5>
         <h1 className='pt-8 text-5xl'>Full-Service Web Design Agency</h1>
         <p className='pt-8 text-2xl'>From startups to Fortune 500 companies,</p>
@@ -171,12 +179,14 @@ export default function Home() {
             height='65'
           />
         </div> */}
+        <br/>
+        <br/>
 <ClientLogos />
-<ClientLogos />
+<LeftToRight />
         <button
          onClick={() => setModalOpen(true)}
           type='button'
-          className='cursor-pointer mt-6 lg:mt-20 lg:ml-25 lg:text-4xl text-white bg-gradient-to-r from-slate-600 via-slate-600 to-slate-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 '
+          className='cursor-pointer mt-6 lg:mt-20 lg:ml-25 lg:text-4xl text-white bg-gradient-to-r from-slate-600 via-slate-600 to-slate-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 '
         >
           Explore All Services
         </button>
@@ -185,8 +195,10 @@ export default function Home() {
         <p>Stay connected with us to get the best service</p>
       </Modal>
       </div>
-      <div className='h-755 pt-5 lg:h-610 bg-gradient-to-r from-blue-950 to-slate-800 text-white '>
-        <div className='scroll-auto ml-10 w-70 lg:w-100 bg-blue-950  lg:mt-8 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:white-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-120'>
+
+
+      {/* <div className='h-755 pt-5 lg:h-610 bg-gradient-to-r from-blue-950 to-slate-800 text-white '>
+        <div className=' ml-10 w-70 lg:w-100 bg-blue-950  lg:mt-8 lg:mr-65 lg:absolute lg:right-0 max-w-sm lg:p-6 e border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:white-gray-700 hover:bg-slate-900 transition duration-500 hover:scale-120'>
           <svg
             className='w-7 h-7 text-gray-500 dark:text-gray-400 mb-3'
             aria-hidden='true'
@@ -335,7 +347,7 @@ export default function Home() {
         </div>
 
         <div >
-          <div className= "">
+          <div>
           <p className='ml-15 pt-10 lg:pt-6 lg:ml-30 text-3xl text-cyan-600'>
             WHY DIGITAL SILK?
           </p>
@@ -359,11 +371,13 @@ export default function Home() {
             height={200}
           />
           </div>
-
         </div>
-        </div>
+      
+ </div> */}
 
-      <div className=" bg-[url('../../public/images/dummy3.jpg')] bg-cover bg-center w-full lg:h-210 lg:h-185 ">
+ <Scroll />
+
+      <div className=" bg-[url('../../public/images/dummy3.jpg')] bg-cover bg-center w-full lg:h-185 ">
         <p className='text-center text-2xl pt-8 lg:absolute lg:right-0 lg:mr-30 lg:text-4xl text-white lg:pt-25'>
           From Concept To Market: <br />
           We Engineer Projects{' '}
@@ -502,15 +516,15 @@ export default function Home() {
         </div>
       </div>
 
-      <div className=" bg-[url('../../public/images/dummy3.jpg')] bg-cover bg-center w-full h-255 lg:h-200">
+      <div className=" bg-[url('../../public/images/dummy3.jpg')] bg-cover bg-center w-full h-full lg:h-full">
         <div className='text-white justify-center text-center text-bold'>
-          <p className='text-4xl pt-5'>
+          <p className='text-4xl lg:pt-15 pt-5 p-5'>
             Custom Web Design Pricing For{' '}
             <span className='text-cyan-600'>Each Client’s Objectives </span>
           </p>
-          <p className='pt-5 text-2xl'>
+          <p className='pt-5 lg:text-2xl text-xl p-2'>
             Every website design project comes with unique challenges and
-            specific requirements <br /> that influence its final cost. A simple
+            specific requirements <br/> that influence its final cost. A simple
             project typically ranges from <br /> $25,000 to $30,000, while more
             complex endeavors can reach $50,000 to $60,000 or more. <br />{' '}
             <br />
@@ -524,7 +538,7 @@ export default function Home() {
         <button
           type='button'
            onClick={() => setModalOpen(true)}
-          className='cursor-pointer ml-30 lg:ml-160 lg:text-4xl text-white font-bold hover:text-cyan-600 py-2 px-4 border border-white-500 rounded-2xl'
+          className='cursor-pointer mt-6 ml-25 lg:mt-5 lg:ml-180 lg:text-4xl text-white bg-gradient-to-r from-slate-600 via-slate-600 to-slate-700  font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 flex items-center justify-center'
         >
           CALCULATE YOUR WEBSITE
         </button>
@@ -535,7 +549,7 @@ export default function Home() {
         <div className='ml-5 mt-16 text-white lg:ml-15 rounded-xl'>
           <div className=' flex gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-20 lg:max-w-none lg:grid-cols-4'>
             <p className='text-white text-sm lg:text-xl '>
-              <span className='text-md lg:text-2xl text-blue-400 lg:text-center '>
+              <span className='text-md lg:text-xl text-blue-400 lg:text-center '>
                 Your choice of platform {' '} <br/> 
               </span>
               also plays a role in the cost. 
@@ -545,7 +559,7 @@ export default function Home() {
             </p>
 
             <p className='text-white text-sm lg:text-xl  lg:ml-40'>
-              <span className='text-md lg:text-2xl text-blue-400'>
+              <span className='text-md lg:text-xl text-blue-400'>
                 Your choice of platform {' '} <br/> 
                 Custom graphic  elements {' '} 
               </span>
@@ -556,7 +570,7 @@ export default function Home() {
               the higher the overall cost.
             </p>
             <p className='text-white text-sm lg:text-xl  lg:ml-40'>
-              <span className='text-md lg:text-2xl text-blue-400'>
+              <span className='text-md lg:text-xl text-blue-400'>
                 After launching 
                 Your choice of platform {' '} 
                 your new website {' '} <br/>
@@ -566,7 +580,7 @@ export default function Home() {
               and  secure top positions in your  industry.
             </p>
             <p className='text-white text-sm lg:text-xl lg:ml-40'>
-              <span className='text-md lg:text-2xl text-blue-400'>
+              <span className='text-md lg:text-xl text-blue-400'>
                 Your choice of  platform {' '}
               </span>
               also plays a role in the cost. 
@@ -579,6 +593,8 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <br />
+        <br />
       </div>
 
       <main className="bg-[#f2f6fe] py-16 px-4 sm:px-10 text-[#1a1a1a]">
@@ -610,8 +626,8 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Table of Contents */}
-        <div className="bg-white mt-12 shadow-md rounded-lg p-6">
+         {/* Table of Contents  */}
+        {/* <div className="bg-white mt-12 shadow-md rounded-lg p-6">
           <h2 className="text-lg font-semibold mb-4">Table of Contents</h2>
           <ul className="space-y-2 text-blue-600">
             <li>▸ How To Find The Best Web Design Company</li>
@@ -622,10 +638,10 @@ export default function Home() {
             <li>▸ Step 5: Make Your Decision</li>
             <li>▸ Why Digital Silk Is The Best Web Design Agency For Your Project</li>
           </ul>
-        </div>
+        </div>  */}
 
         {/* Section below Table of Contents */}
-        <div className="mt-12 text-gray-800">
+        {/* <div className="mt-12 text-gray-800">
           <p className="text-base mb-4">
             Whether you’re starting a brand from the ground up or your current
             website needs a complete overhaul due to lack of performance, working
@@ -655,8 +671,9 @@ export default function Home() {
             learn how to evaluate potential web design companies to partner with
             your brand.
           </p>
-        </div>
-      </div>
+        </div> */}
+
+      </div> 
     </main>
 
 <section className="bg-white text-gray-800 py-12 px-4 sm:px-10 max-w-5xl mx-auto">
@@ -804,7 +821,40 @@ export default function Home() {
       </div>
     </section>
 
-      <section className='bg-white dark:bg-gray-900'>
+
+
+ <div className="bg-[#0B1120] text-white py-16 px-4 text-center">
+      <h2 className="text-3xl font-bold mb-4">Sign up to get websites</h2>
+      <p className="text-gray-400 max-w-xl mx-auto mb-6">
+        Stay up to date with the roadmap progress, announcements and exclusive discounts. Feel free to sign up with your email.
+      </p>
+
+      <form className="flex justify-center max-w-md mx-auto">
+        <div className="relative w-full">
+          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+            📧
+          </span>
+          <input
+            type="email"
+            placeholder="Your email"
+            className="w-full pl-10 pr-4 py-2 rounded-l-md bg-[#1E293B] text-white focus:outline-none"
+          />
+        </div>
+        <button
+          type="submit"
+          className="bg-white text-black px-4 py-2 rounded-r-md hover:bg-gray-200 transition"
+        >
+          Subscribe
+        </button>
+      </form>
+
+      <p className="text-sm text-gray-400 mt-4">
+        We care about the protection of your data. <a href="#" className="text-white underline">Read our Privacy Policy</a>.
+      </p>
+    </div>
+
+
+      {/* <section className='bg-white dark:bg-gray-900'>
         <div className='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'>
           <div className='mx-auto max-w-screen-md sm:text-center'>
             <h2 className='mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white'>
@@ -864,7 +914,7 @@ export default function Home() {
             </form>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className='bg-white dark:bg-gray-900'>
         <div className='py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6'>
@@ -1138,7 +1188,7 @@ export default function Home() {
               placeholder="Enter Your Email"
               className="flex-1 bg-transparent text-white placeholder-white/70 py-3 px-2 focus:outline-none"
             />
-            <button className="bg-cyan-400 hover:bg-cyan-500 text-black font-semibold px-4 py-2">
+            <button className="w-26 h-15 bg-cyan-400 hover:bg-cyan-500 text-black font-semibold px-4 py-2">
               SIGN UP
             </button>
           </div>
@@ -1147,19 +1197,22 @@ export default function Home() {
       </div>
     </section>
 
-       <section className="bg-gradient-to-br from-[#0c0c39] via-[#1b0f49] to-[#00325e] text-white py-20 px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
-        <section/>
-        {/* Contact Form */}
-        <div>
-          <h2 className="text-2xl font-bold mb-6">Start A Conversation With Us</h2>
-          <form className="space-y-4">
-            <input type="text" placeholder="Name*" className="w-full px-4 py-3 bg-transparent border-b border-gray-500 focus:outline-none" />
+       <section className="bg-gradient-to-br from-[#0c0c39] via-[#1b0f49] to-[#00325e] text-white py-20 px-6" > 
+      
+
+
+
+      <div class="h-screen flex items-center justify-center">
+        
+  <form className="p-8 rounded shadow-md max-w-md space-y-4">
+     <h2 className="text-2xl font-bold mb-6">Start A Conversation With Us</h2>
+    {/* <!-- Your form elements here --> */}
+    <input type="text" placeholder="Name*" className="w-full px-4 py-3 bg-transparent border-b border-gray-500 focus:outline-none" />
             <input type="text" placeholder="Company Name*" className="w-full px-4 py-3 bg-transparent border-b border-gray-500 focus:outline-none" />
             <input type="email" placeholder="Email*" className="w-full px-4 py-3 bg-transparent border-b border-gray-500 focus:outline-none" />
             <input type="tel" placeholder="Phone*" className="w-full px-4 py-3 bg-transparent border-b border-gray-500 focus:outline-none" />
             <textarea placeholder="Your Message*" rows={4} className="w-full px-4 py-3 bg-transparent border-b border-gray-500 focus:outline-none resize-none" />
-            <button
+  <button
               type="submit"
               onClick={() => setModalOpen(true)}
               className="ml-30 mt-4 bg-gradient-to-r from-purple-500 to-blue-500 px-6 py-2 rounded text-white hover:opacity-90 transition"
@@ -1170,23 +1223,12 @@ export default function Home() {
         <h2 className="text-xl font-bold mb-4">This Section is not complete yet</h2>
         <p>Stay connected with us to get the best service</p>
       </Modal>
-          </form>
-        </div>
-      </div>
+  </form>
+</div>
+</ section>
+     
 
-      {/* Bottom Tagline and Social Icons */}
-      <div className=" to-purple-600 mt-20 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left ">
-        <div>
-          <p className="text-sm uppercase text-gray-300">Take the silk road to</p>
-          <h3 className="text-2xl font-bold text-cyan-400">Digitizing Your Business Growth</h3>
-        </div>
-        <div className="flex items-center gap-4 text-white">
-          <span className="text-sm font-medium">Follow Us</span>
-          <a href="#" className="text-xl"><i className="fab fa-instagram"></i></a>
-          <a href="#" className="text-xl"><i className="fab fa-linkedin"></i></a>
-        </div>
-      </div>
-    </section>
-    </>
+</>
   );
+
 }

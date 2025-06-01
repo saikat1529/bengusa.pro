@@ -27,7 +27,7 @@ export default function ClientLogos() {
   }, []);
 
   return (
-    <div className="logos bg-gradient-to-r from-slate-900 to-slate-900">
+    <div className="logos bg-gradient-to-r from-slate-900 to-blue-900">
       <div className="logos-slide">
         {[...logos, ...logos].map((logo, i) => (
           <div key={i} className="inline-block min-w-[140px] max-w-[140] min-h-[35px] max-h-[35px] ">

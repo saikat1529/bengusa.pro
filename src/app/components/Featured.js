@@ -49,7 +49,7 @@ export default function Featured() {
       </div>
 
       {/* Grid Display */}
-      <div className="grid grid-cols-1  gap-8 items-center gap-x-10 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-50 lg:max-w-none lg:grid-cols-2">
+      <div className="grid grid-cols-1  gap-8 items-center gap-x-10 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-50 lg:max-w-none lg:grid-cols-2 ">
         {filteredExamples.map((item, index) => (
           <div
             key={index}
