@@ -48,7 +48,7 @@ export default function StickyScrollSection() {
   }, []);
 
   return (
-    <div className="lg:relative lg:h-[855px] lg:flex h-[full]">
+    <div className="lg:relative lg:h-[855px] lg:flex h-[full] md:h-[full]">
       {/* Scrollable Left */}
       <div
         ref={leftScrollRef}
@@ -228,18 +228,18 @@ export default function StickyScrollSection() {
       {/* Sticky Right */}
       <div
         ref={rightPanelRef}
-        className="lg:w-1/2 lg:p-10 pt-10 bg-white bg-gradient-to-r from-blue-950 to-slate-800"
+        className="lg:w-1/2 lg:p-10 pt-10 md:h-[full] bg-white bg-gradient-to-r from-blue-950 to-slate-800"
       >
 
-<p className='ml-15 lg:pt-4 lg:ml-30 text-3xl text-cyan-600'>
+<p className='ml-15 lg:pt-4 lg:ml-30 md:h-[full] md:text-center text-3xl text-cyan-600'>
             WHY DIGITAL SILK?
           </p>
-          <h1 className=' font-bold mb-6 ml-15 lg:pt-3 lg:ml-30 text-4xl lg:text-4xl text-white'>
+          <h1 className=' font-bold mb-6 ml-15 lg:pt-3 lg:ml-30 md:text-center text-4xl lg:text-4xl text-white'>
             Discover Our <br />
             Expertise as a Web <br />
             Design Company
           </h1>
-          <p className='ml-10 pr-5 lg:pr-0 pt-5 lg:pt-8 lg:ml-30 text-bold text-md lg:text-2xl text-white'>
+          <p className='ml-10 pr-5 lg:pr-0 pt-5 lg:pt-8 lg:ml-30 md:m-8 md:text-center text-bold text-md lg:text-xl text-white'>
             As a full-service web design agency, we handle all your
             digital needs under one roof. Our custom web 
             design services include thorough research and planning,
@@ -247,13 +247,14 @@ export default function StickyScrollSection() {
             reach, drive traffic and encourage engagement.
           </p>
             <Image
-                      className='ml-15 lg:ml-75 mt-8 rounded-xl '
+                      className='ml-15 lg:ml-75 xl:ml-50 xl:w-55 mt-8 rounded-xl md:ml-60 lg:w-60'
                       src='/images/dummy2.jpg'
                       alt='Picture of the author'
                       width={300}
                       height={200}
                     />
 
+      <br/>
       <br/>
       </div>
     </div>
