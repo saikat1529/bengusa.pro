@@ -34,7 +34,8 @@ export default function Featured() {
   return (
     <main className="bg-gradient-to-r from-slate-900 to-slate-900 text-white p-4 md:p-10 ">
       {/* Filter Menu */}
-      <div className="flex justify-center gap-6 mb-10">
+      <div className="w-full overflow-x-auto">
+            <div className="flex gap-4 mb-10 w-max mx-auto px-4 sm:justify-center">
         {filters.map((filter) => (
           <button
             key={filter}
@@ -47,9 +48,9 @@ export default function Featured() {
           </button>
         ))}
       </div>
-
+</div>
       {/* Grid Display */}
-      <div className="grid grid-cols-1  gap-8 items-center gap-x-10 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-50 lg:max-w-none lg:grid-cols-2 ">
+      <div className="grid grid-cols-1 gap-8 items-center gap-x-10 gap-y-10 sm:max-w-xl sm:grid-cols-2 md:grid-cols-2 sm:gap-x-10 lg:mx-50 lg:max-w-none lg:grid-cols-2 ">
         {filteredExamples.map((item, index) => (
           <div
             key={index}
