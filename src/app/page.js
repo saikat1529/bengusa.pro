@@ -58,11 +58,11 @@ export default function Home() {
 <ClientLogos />
       <div className='lg:pt-15 pt-10 bg-gradient-to-r from-slate-900 to-slate-900 text-white lg:h-full h-360'>
         
-        <p className=' ml-4 lg:ml-60 lg:mt-8 lg:text-5xl text-4xl font-bold'>
+        <p className=' ml-4 md:ml-20 lg:ml-60 lg:mt-8 lg:text-4xl text-3xl lg:font-bold'>
           {' '}
           Creative Web Agency  delivering <br /> Custom Solutions
         </p>
-        <p className='pt-8 ml-4 lg:ml-60 lg:mt-8 text-xl font-medium'>
+        <p className='pt-8 ml-4 lg:ml-60 md:ml-20 lg:mt-8 lg:text-xl font-bold'>
           {' '}
           ✔ Custom Web Design Solutions{' '}
           <span className='text-blue-300'>
@@ -70,7 +70,7 @@ export default function Home() {
             To <br /> Drive Conversions{' '}
           </span>{' '}
         </p>
-        <p className='ml-4 lg:ml-60 lg:mt-8 mt-5 text-xl font-medium'>
+        <p className='ml-4 lg:ml-60 md:ml-20 lg:mt-8 mt-5 lg:text-xl font-medium'>
           {' '}
           ✔ Effective Marketing Campaigns{' '}
           <span className='text-blue-300'>
@@ -78,12 +78,12 @@ export default function Home() {
             To <br /> Generate Growth{' '}
           </span>{' '}
         </p>
-        <p className=' ml-4 lg:ml-60 mt-5 text-xl font-medium'>
+        <p className=' ml-4 lg:ml-60 md:ml-20 mt-5 lg:text-xl font-medium'>
           {' '}
           ✔ Tailored Branding Strategies{' '}
           <span className='text-blue-300'> <br/> To Drive Engagement </span>{' '}
         </p>
-        <p className='lg:w-1/2 ml-4 lg:ml-60 lg:text-2xl mt-5 text-lg'>
+        <p className='lg:w-1/2 ml-4 lg:ml-60 md:ml-20 lg:text-xl mt-5 text-lg md:m-10'>
           Digital Silk is a web design company & digital marketing agency
           focused on growing brands online. We create effective brand
           strategies, custom web design, development, and digital
@@ -109,12 +109,12 @@ export default function Home() {
     </video>  
       </div>
         </div>
-        <div className='text-center lg:text-left'>
+        <div className='text-center lg:text-left '>
         <Image
-          className='mt-10 lg:ml-17 inline-block rounded-2xl lg:absolute lg:top-250 lg:right-30 '
+          className='mt-10 lg:ml-17 inline-block rounded-2xl lg:absolute lg:top-250 lg:right-30 md:w-1/2 lg:w-70 '
           src='/images/dummy2.jpg'
           alt='Picture of the author'
-          width={350}
+          width={250}
           height={350}
         />
         </div>
@@ -137,9 +137,9 @@ export default function Home() {
 
       <div className='lg:pt-8 bg-gradient-to-r from-slate-900 to-slate-900 text-white lg:h-190 h-190 text-center'>
         <h5 className='pt-8 text-2xl text-cyan-600'> Clients Across Industries </h5>
-        <h1 className='pt-8 text-5xl'>Full-Service Web Design Agency</h1>
-        <p className='pt-8 text-2xl'>From startups to Fortune 500 companies,</p>
-        <h3 className='pt-3 text-3xl'>
+        <h1 className='pt-8 text-5xl lg:text-5xl'>Full-Service Web Design Agency</h1>
+        <p className='pt-8 text-xl lg:text-2xl'>From startups to Fortune 500 companies,</p>
+        <h3 className='pt-3 text-xl lg:text-3xl'>
           we create custom solutions that grow brands online
         </h3>
         {/* <div className='mx-auto mt-30 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-20 lg:max-w-none lg:grid-cols-5'>
@@ -186,7 +186,7 @@ export default function Home() {
         <button
          onClick={() => setModalOpen(true)}
           type='button'
-          className='cursor-pointer mt-6 lg:mt-20 lg:ml-25 lg:text-4xl text-white bg-gradient-to-r from-slate-600 via-slate-600 to-slate-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 '
+          className='cursor-pointer mt-14 lg:mt-15 lg:ml-25 lg:text-4xl text-bold text-white bg-gradient-to-r from-slate-600 via-slate-600 to-slate-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 '
         >
           Explore All Services
         </button>
@@ -378,7 +378,7 @@ export default function Home() {
  <Scroll />
 
       <div className=" bg-[url('../../public/images/dummy3.jpg')] bg-cover bg-center w-full lg:h-185 ">
-        <p className='text-center text-2xl pt-8 lg:absolute lg:right-0 lg:mr-30 lg:text-4xl text-white lg:pt-25'>
+        <p className='text-center text-2xl xl:text-3xl pt-8 lg:absolute lg:right-0 lg:mr-30 lg:text-4xl text-white lg:pt-25'>
           From Concept To Market: <br />
           We Engineer Projects{' '}
           <span className='text-blue-400'> For Superior Performance </span>
@@ -387,23 +387,23 @@ export default function Home() {
           HP needed to implement a global <br /> rewards program We Engineer
           Projects For Superior Performance
         </p>
-        <p className='text-center text-3xl pt-5 lg:absolute lg:right-0 lg:mr-100 lg:text-xl text-white lg:pt-75'>
+        <p className='text-center text-3xl pt-5 lg:absolute lg:right-0 lg:mr-100 lg:text-xl  text-white lg:pt-75'>
           {' '}
           <span className=' text-blue-400'>In 6 months,</span> we achieved:
         </p>
 
         <div>
-          <p className='text-center text-7xl pt-5 lg:text-9xl text-blue-400 lg:absolute lg:right-0 lg:mr-180 lg:pt-85'>
+          <p className=' xl:mr-150 text-center text-7xl pt-5 lg:text-7xl xl:text-7xl text-blue-400 lg:absolute lg:right-0 lg:mr-180 lg:pt-85'>
             40k
           </p>
-          <p className=' text-center text-2xl pt-2 text-white lg:absolute lg:right-0 lg:mr-180 lg:pt-120'>
+          <p className='xl:mr-135 xl:pt-110 text-center text-2xl pt-2 text-white lg:absolute lg:right-0 lg:mr-180 lg:pt-120'>
             Active members <br /> inside the program
           </p>
         </div>
         <button
           type='button'
            onClick={() => setModalOpen(true)}
-          className='cursor-pointer ml-18 text-xl lg:ml-250 lg:absolute lg:mt-150 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
+          className='cursor-pointer ml-18 text-xl lg:ml-120 md:ml-62 lg:absolute lg:mt-150 xl:mt-140 xl:ml-118 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:me-2 lg:mb-2'
         >
           READ HP CASE STUDY ▶
         </button>
@@ -413,17 +413,17 @@ export default function Home() {
       </Modal>
 
         <div>
-          <p className='text-center text-7xl pt-5 lg:text-9xl text-blue-400 lg:absolute lg:right-0 lg:mr-75 lg:pt-85'>
+          <p className='text-center text-7xl pt-5 lg:text-7xl xl:text-7xl text-blue-400 lg:absolute lg:right-0 lg:mr-75 lg:pt-85'>
             56%
           </p>
-          <p className='text-center text-2xl pt-2 text-white lg:absolute lg:right-0 lg:mr-75 lg:pt-120 lg:text-xl'>
+          <p className='text-center xl:pt-110 text-2xl pt-2 text-white lg:absolute lg:right-0 lg:mr-75 xl:mr-65 lg:pt-120 lg:text-xl'>
             of customers are <br /> repeat customers
           </p>
         </div>
         <button
           type='button'
            onClick={() => setModalOpen(true)}
-          className='cursor-pointer ml-18 text-xl lg:ml-150 lg:absolute lg:mt-150 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
+          className='cursor-pointer ml-18 text-xl lg:ml-225 xl:ml-205  md:ml-62 lg:absolute lg:mt-150 xl:mt-140 text-white bg-gradient-to-r from-cyan-600 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 lg:font-medium rounded-lg lg:text-xl px-5 py-2.5 lg:text-center lg:me-2 lg:mb-2'
         >
           READ HP CASE STUDY ▶
         </button>
@@ -432,14 +432,14 @@ export default function Home() {
         <p>Stay connected with us to get the best service</p>
       </Modal>
 
-        <div className='bg-cover bg-center relative text-white h-full w-72'>
-          <div className='ml-20 h-full w-full px-6 py-10 space-y-10'>
-            <div className='flex justify-center mt-10'>
+        <div className='bg-cover bg-center relative text-white h-full w-72 xl:ml-10'>
+          <div className='ml-16 xl:ml-10 md:ml-10 h-full w-full px-6 py-10 space-y-10'>
+            {/* <div className='flex justify-center mt-10'>
               <Image src='/images/hp.png' alt='HP' width={75} height={10} />
-            </div>
-            <div className='border-t-4 border-cyan-400 w-full'></div>
+            </div> */}
+            {/* <div className='border-t-4 border-cyan-400 w-full'></div> */}
 
-            <div className='flex justify-center'>
+            <div className='flex justify-center lg:pt-25  '>
               <Image
                 src='/images/xerox.png'
                 alt='Xerox'
@@ -450,7 +450,7 @@ export default function Home() {
             <div className='border-t border-white/50 w-full'></div>
 
             <div className='flex justify-center'>
-              <Image src='/images/3.png' alt='doForms' width={75} height={10} />
+              <Image src='/images/miami.gif' alt='doForms' width={75} height={10} />
             </div>
             <div className='border-t border-white/50 w-full'></div>
 
@@ -477,16 +477,10 @@ export default function Home() {
       </div>
 
       <div className='relative bg-gray-900 text-white'>
-        <div className='absolute inset-0'>
-          <Image
-            className='col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1'
-            src='/public/images/bengusa.png'
-            alt='Statamic'
-            width='158'
-            height='65'
-          />
-          <div className='absolute inset-0 bg-gradient-to-r from-purple-800 via-transparent to-gray-900 opacity-80'></div>
-        </div>
+        {/* <div className=' inset-0'> */}
+         
+          <div className='absolute inset-0 bg-gradient-to-r from-slate-800 via-transparent to-gray-900 opacity-80'></div>
+        {/* </div> */}
 
         <div className='relative z-10 max-w-4xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center'>
           <div className='md:w-1/3 mb-10 md:mb-0'>
@@ -495,15 +489,23 @@ export default function Home() {
                 className='w-8 h-8 text-white'
                 fill='currentColor'
                 viewBox='0 0 20 20'
-              ></svg>
-              <span className='text-2xl font-semibold'>
-                WHAT OUT CLIENT LOVE ABOUT OUR WORK
+              ></svg> 
+              <span className='text-2xl md:text-3xl lg:text-4xl font-semibold'>
+                   <Image
+            className='col-span-2 col-start-2 max-h-18 w-full object-contain sm:col-start-auto lg:col-span-1'
+            src='/images/svg/bengusaicon.svg'
+            alt='Statamic'
+            width='158'
+            height='65'
+          />
+                WHAT OUR CLIENT LOVE ABOUT OUR WORK
               </span>
+              
             </div>
           </div>
 
-          <div className='md:w-2/3'>
-            <blockquote className='text-lg font-medium leading-relaxed'>
+          <div className='md:w-2/3 md:m-8'>
+            <blockquote className='text-lg lg:text-xl font-medium leading-relaxed'>
               digital silk is not just a company - they are a team of experts
               who turn visions into digital realities with unparalleled
               expertise, enthusiasm, and creativeness.{' '}
@@ -517,38 +519,40 @@ export default function Home() {
       </div>
 
       <div className=" bg-[url('../../public/images/dummy3.jpg')] bg-cover bg-center w-full h-full lg:h-full">
-        <div className='text-white justify-center text-center text-bold'>
-          <p className='text-4xl lg:pt-15 pt-5 p-5'>
+        <div className='text-white justify-center text-center text-bold md:u-5'>
+          <p className='text-4xl md:text-3xl  lg:pt-15 pt-5 p-5'>
             Custom Web Design Pricing For{' '}
             <span className='text-cyan-600'>Each Client’s Objectives </span>
           </p>
-          <p className='pt-5 lg:text-2xl text-xl p-2'>
+          <p className='pt-5 lg:text-2xl text-xl p-2 md:m-6'>
             Every website design project comes with unique challenges and
-            specific requirements <br/> that influence its final cost. A simple
-            project typically ranges from <br /> $25,000 to $30,000, while more
-            complex endeavors can reach $50,000 to $60,000 or more. <br />{' '}
-            <br />
+            specific requirements that influence its final cost. A simple
+            project typically ranges from  $25,000 to $30,000, while more
+            complex endeavors can reach $50,000 to $60,000 or more. {' '}
+            <br/>
             The technical setup of your website, which directly impacts its
-            performance, is a key <br /> factor in determining cost. More
-            complex setups that demand significant time and effort <br /> will
+            performance, is a key  factor in determining cost. More
+            complex setups that demand significant time and effort  will
             naturally increase the overall price.
           </p>
         </div>
         <br/>
+        <div className='flex justify-center mt-6 lg:mt-5 mb-2'>
         <button
           type='button'
            onClick={() => setModalOpen(true)}
-          className='cursor-pointer mt-6 ml-25 lg:mt-5 lg:ml-180 lg:text-4xl text-white bg-gradient-to-r from-slate-600 via-slate-600 to-slate-700  font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 flex items-center justify-center'
+          className='text-white bg-gradient-to-r from-slate-600 via-slate-600 to-slate-700 font-medium rounded-lg text-sm px-5 py-2.5 me-2 flex items-center justify-center lg:text-4xl'
         >
           CALCULATE YOUR WEBSITE
         </button>
+        </div>
         <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
         <h2 className="text-xl font-bold mb-4">This Section is not complete yet</h2>
         <p>Stay connected with us to get the best service</p>
       </Modal>
-        <div className='ml-5 mt-16 text-white lg:ml-15 rounded-xl'>
-          <div className=' flex gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-20 lg:max-w-none lg:grid-cols-4'>
-            <p className='text-white text-sm lg:text-xl '>
+        {/* <div className='ml-2 md:ml-26 md:m-10 mt-16 text-white lg:ml-15 rounded-xl'>
+          <div className='flex gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-20 lg:max-w-none lg:grid-cols-4 nd:grid-cols-4'>
+            <p className='text-white text-sm lg:text-xl'>
               <span className='text-md lg:text-xl text-blue-400 lg:text-center '>
                 Your choice of platform {' '} <br/> 
               </span>
@@ -592,7 +596,48 @@ export default function Home() {
               <span className=''></span>
             </p>
           </div>
-        </div>
+        </div> */}
+
+        <div className="px-4 py-10 mt-16 text-white max-w-screen-xl mx-auto">
+  <div className="grid gap-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <p className="text-md lg:text-base text-justify">
+        <span className="block text-blue-400 text-xl lg:text-xl mb-1">
+          Your choice of platform
+        </span>
+        also plays a role in the cost. Templated solutions are more affordable, while developing a fully custom site will increase the project’s total expense.
+      </p>
+    </div>
+
+    <div>
+      <p className="text-md lg:text-base text-justify">
+        <span className="block text-blue-400 text-xl lg:text-xl mb-1">
+          Custom graphic elements
+        </span>
+        are essential for enhancing your web presence. The more complex the design requirements, the higher the overall cost will be.
+      </p>
+    </div>
+
+    <div>
+      <p className="text-md lg:text-base text-justify">
+        <span className="block text-blue-400 text-xl lg:text-xl mb-1">
+          launching your website
+        </span>
+        you’ll want to outperform competitors in search engine rankings and secure top positions in your industry.
+      </p>
+    </div>
+
+    <div>
+      <p className="text-md lg:text-base text-justify">
+        <span className="block text-blue-400 text-xl lg:text-xl mb-1">
+          Platform impact pricing
+        </span>
+        Templated solutions are cost-effective, while custom-built sites significantly raise the total project budget.
+      </p>
+    </div>
+  </div>
+</div>
+
         <br />
         <br />
       </div>
@@ -762,11 +807,11 @@ export default function Home() {
           <li>How much will my project cost and how long will it take to complete?</li>
           <li>How do you measure results?</li>
         </ul>
-        <p className='lg:mt-10 lg:text-2xl'>These questions will help give you an inside look into the experience of the agency’s team members, the <br/>value that the agency offers and what your relationship with the agency will look like throughout the life of <br/> your  partnership — all important factors to consider when choosing the best web design agency for your project.</p>
+        <p className='lg:mt-10 lg:text-xl'>These questions will help give you an inside look into the experience of the agency’s team members, the value that the agency offers and what your relationship with the agency will look like throughout the life of your  partnership — all important factors to consider when choosing the best web design agency for your project.</p>
       </div>
     </section>
 
-<section className="bg-white text-gray-800 py-12 px-4 sm:px-10 max-w-5xl mx-auto">
+    <section className="bg-white text-gray-800 py-12 px-4 sm:px-10 max-w-5xl mx-auto">
       {/* Step 5 */}
       <div className="mb-10">
         <h3 className="text-xl font-semibold text-blue-800 mb-2">Step 5: Make Your Decision</h3>
