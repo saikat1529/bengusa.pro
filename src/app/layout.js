@@ -2,6 +2,7 @@ import {Oswald, Roboto, Playwrite_AU_SA, Lexend} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
+import ComingSoon from "@/app/components/ComingSoon";
 
 const oswaldSans = Oswald({
     variable: "--font-oswald",
@@ -36,15 +37,19 @@ export const metadata = {
 };
 
 export default function RootLayout({children}) {
+    const maintenanceMode = process.env.NEXT_PUBLIC_MAINTENANCE_MODE === 'true';
+    console.log(maintenanceMode);
     return (
         <html lang="en">
-        <body
-            className={`${oswaldSans.variable} ${robotoSans.variable} ${playwriteSans.variable} ${lexendSans.variable} antialiased`}
-        >
-        <Navbar/>
-        <main>{children}</main>
-        <Footer/>
-        </body>
+            <body className={`${oswaldSans.variable} ${robotoSans.variable} ${playwriteSans.variable} ${lexendSans.variable} antialiased`}>
+            {maintenanceMode?<ComingSoon/>:(
+                <>
+                    <Navbar/>
+                    <main>{children}</main>
+                    <Footer/>
+                </>
+            )}
+            </body>
         </html>
     );
 }
